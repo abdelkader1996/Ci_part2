@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Item } from './menue.service';
@@ -12,7 +13,7 @@ export class OrderService {
   itemsToOrder: String[] = [];
   priceToPay = 0;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private httpClient: HttpClient) {}
 
   additem(item: Item) {
     this.itemsToOrder.push(item.shortName);
@@ -20,7 +21,15 @@ export class OrderService {
     console.log('items', this.itemsToOrder);
     console.log('to pay:', this.priceToPay);
   }
+  startNewOrder(tableid: number) {
+    //TODO
+    //route to create new Order
+    this.httpClient.post<any>('', {}).subscribe((data) => {
+      //
+    });
 
+    //
+  }
   delete(item: any) {
     this.itemsToOrder = this.itemsToOrder.filter((i) => i != item);
   }
@@ -29,7 +38,9 @@ export class OrderService {
     //
     //send order to BFF
     //TODO
-
+    this.httpClient.post<any>('', {}).subscribe((data) => {
+      //
+    });
     //
     //routing to waiting :
     this.router.navigate(['wait']);
@@ -38,6 +49,10 @@ export class OrderService {
   paye() {
     //TODO
     //payement  to data base
+    //route to Paye
+    this.httpClient.post<any>('', {}).subscribe((data) => {
+      //
+    });
 
     this.router.navigate(['']);
   }
