@@ -1,6 +1,12 @@
 <div class="container">
   <div class="i2">
-    <p>click sur start pour commander</p>
+    <p>click start pour commander</p>
+    <p>Select table:</p>
+    <select [(ngModel)]="selectedValue">
+      <option *ngFor="let t of tables" [ngValue]="t.number">
+        {{ t.number }}
+      </option>
+    </select>
   </div>
-  <button (click)="start()">Start</button>
+  <button (click)="start()">START</button>
 </div>

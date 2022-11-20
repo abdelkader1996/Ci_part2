@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from 'src/app/services/menue.service';
 import { OrderService } from 'src/app/services/order.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class PayementComponent implements OnInit {
   totale = 0;
-  items: String[] = [];
+  items: Item[] = [];
 
   constructor(private orderService: OrderService) {}
 
@@ -18,5 +19,6 @@ export class PayementComponent implements OnInit {
   }
   payer() {
     this.orderService.paye();
+    this.orderService.payeall();
   }
 }

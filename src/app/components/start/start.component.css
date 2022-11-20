@@ -11,6 +11,15 @@ button {
   margin: auto;
   cursor: pointer;
 }
+
+select {
+  padding: 15px;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 30px;
+  margin: 25px;
+  color: #581845;
+}
 p {
   font-size: 35px;
   color: #581845;

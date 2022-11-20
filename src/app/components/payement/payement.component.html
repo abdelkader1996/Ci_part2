@@ -2,7 +2,7 @@
   <div class="i2">
     <p>details de la facture</p>
   </div>
-  <h5 *ngFor="let item of items">- {{ item }}</h5>
+  <h5 *ngFor="let item of items">- {{ item.shortName }} {{ item.category }}</h5>
   <h4>Total a payer : {{ totale }} Euro</h4>
 
   <button (click)="payer()">Payer</button>

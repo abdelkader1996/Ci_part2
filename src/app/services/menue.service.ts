@@ -31,4 +31,5 @@ export interface Item {
   price: number;
   category: String;
   image: String;
+  howMany: number;
 }

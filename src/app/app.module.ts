@@ -8,10 +8,17 @@ import { MainComponent } from './components/main/main.component';
 import { WaitComponent } from './components/wait/wait.component';
 import { PayementComponent } from './components/payement/payement.component';
 import { StartComponent } from './components/start/start.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, WaitComponent, PayementComponent, StartComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    WaitComponent,
+    PayementComponent,
+    StartComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

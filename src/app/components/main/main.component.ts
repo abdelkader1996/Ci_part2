@@ -10,7 +10,7 @@ import { OrderService } from 'src/app/services/order.service';
 export class MainComponent implements OnInit {
   items: Item[] = [];
   totale = 0;
-  itemsToOrder: String[] = [];
+  itemsToOrder: Item[] = [];
 
   constructor(
     private menueService: MenueService,
@@ -26,6 +26,8 @@ export class MainComponent implements OnInit {
       this.items = data;
       console.log(data);
     });
+
+    console.log('table number : ', this.orderService.TABLE_NUMBER);
   }
   validate_order() {
     this.orderService.order();

@@ -18,7 +18,7 @@
     <div class="orderdetails">
       <span *ngFor="let item of itemsToOrder">
         <button class="hhh" (click)="delete(item)">
-          <h5>- {{ item }}</h5>
+          <h5>- {{ item.shortName }} {{ item.price }} EUR</h5>
         </button>
       </span>
     </div>
